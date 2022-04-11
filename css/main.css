@@ -42,3 +42,11 @@
   height: auto;
   object-fit: none;
 }
+
+/* Help Center */
+.help {
+}
+.help-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
