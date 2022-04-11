@@ -3,12 +3,19 @@
 .sidebar {
   padding: 50px 15px 60px 55px;
   width: 252px;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: rgb(219, 219, 219);
 }
 
 .sidebar-logo {
   margin-bottom: 57px;
+}
+
+.sidebar-help {
+  margin-top: auto;
 }
 
 /* NAV */
@@ -31,6 +38,11 @@
 }
 
 .nav-list a {
+  transition: color 0.2 ease-in;
+}
+
+.nav-list a:hover {
+  color: #ea90a6;
 }
 
 .nav-list img {
@@ -45,8 +57,161 @@
 
 /* Help Center */
 .help {
+  font-size: 15.7px;
 }
 .help-icon {
   display: inline-block;
   vertical-align: middle;
+  margin-right: 16px;
+}
+
+/* main content */
+
+.main {
+  padding-top: 45px;
+  width: 1100px;
+  height: 800px;
+  background-color: aqua;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 30px;
+  margin-bottom: 70px;
+}
+
+/* Search */
+
+.search {
+  width: 490px;
+  height: 44px;
+}
+
+.search-label {
+  height: 100%;
+  display: flex;
+}
+
+.search-icon {
+  height: 24px;
+  width: 24px;
+  align-self: center;
+}
+
+.search-input {
+  padding: 0 17px;
+  flex-grow: 1;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "Circular Std";
+}
+
+.search-input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/*Nav  Header  */
+
+.nav-header {
+  font-size: 17px;
+  font-family: "Circular Std";
+}
+
+.nav-header-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header-text {
+  position: relative;
+}
+
+.nav-header-text::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 0%;
+  bottom: -9px;
+  display: block;
+
+  height: 2px;
+  background-color: black;
+  transition: width 0.2s ease-in;
+}
+
+.nav-header-text:hover::after {
+  width: 100%;
+}
+
+.nav-header-text.active::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  bottom: -9px;
+  display: block;
+
+  height: 2px;
+  background-color: black;
+}
+
+.nav-header-text + .nav-header-icon {
+  margin-left: 50px;
+}
+
+.nav-header-text + .nav-header-text {
+  margin-left: 42px;
+}
+
+.nav-header-icon + .nav-header-icon {
+  margin-left: 25px;
+}
+
+/* Cards Wrapper */
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.cards-wrapper-row {
+  display: flex;
+  column-gap: 20px;
+}
+
+.cards-wrapper-col {
+}
+
+.col-horizontal {
+  display: flex;
+  column-gap: 20px;
+}
+
+.col-vertical {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+/* Cards */
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-horizontal {
+  width: 539px;
+  height: 180px;
+}
+
+.card-sale {
+  background-image: url("./../img/cards/vector-1.svg");
+  background-size: cover;
+  background-position: center;
 }
